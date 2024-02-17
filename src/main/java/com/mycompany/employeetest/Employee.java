@@ -23,4 +23,6 @@ public class Employee {
         this.email = email;
     }
     
+    // Static field: nextEmpNum, of type int and initialised to 1, ??????which initialises empNum in the constructor???????
+    static int nextEmpNum = 1;
 }
