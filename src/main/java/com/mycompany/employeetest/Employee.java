@@ -10,4 +10,9 @@ package com.mycompany.employeetest;
  */
 public class Employee {
     
+    // Declares Employee class with the following fields and methods
+    String name;
+    String email;
+    int empNum;
+    
 }
