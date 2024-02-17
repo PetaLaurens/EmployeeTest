@@ -15,4 +15,12 @@ public class Employee {
     String email;
     int empNum;
     
+    // One constructor initialises the name and email instance fields with default values
+    
+    // The other constructor initialises these fields with values passed as parameters
+    public Employee(String name, String email) {
+        this.name = name;
+        this.email = email;
+    }
+    
 }
