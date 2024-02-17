@@ -23,6 +23,19 @@ public class Employee {
         this.email = email;
     }
     
+    // Accessor methods to return name, email and empNum values
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public int getEmpNum() {
+        return empNum;
+    }
+    
     // Static field: nextEmpNum, of type int and initialised to 1, ??????which initialises empNum in the constructor???????
     static int nextEmpNum = 1;
 }
