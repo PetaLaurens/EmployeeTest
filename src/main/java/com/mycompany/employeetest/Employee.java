@@ -43,4 +43,9 @@ public class Employee {
     
     // Static field: nextEmpNum, of type int and initialised to 1, ??????which initialises empNum in the constructor???????
     static int nextEmpNum = 1;
+    
+    // To return the current value of nextEmpNum.
+    public static int getNextEmpNum() {
+        return nextEmpNum;
+    }
 }
