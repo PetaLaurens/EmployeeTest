@@ -19,7 +19,6 @@ public class Employee {
     public Employee() {
         this.name = name;
         this.email = email;
-        this.empNum = nextEmpNum++;
     }
     
     // The other constructor initialises these fields with values passed as parameters
