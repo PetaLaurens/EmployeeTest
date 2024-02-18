@@ -20,5 +20,10 @@ public class EmployeeTest {
         
         // Declares an array, called projectGroup, to store the above Employee objects 
         Employee[] projectGroup = {emp1, emp2, emp3};
+        
+        // Prints out the value of variable nextEmpNum to the terminal window
+        System.out.println(Employee.nextEmpNum);
+        }
+    
     }
 }
