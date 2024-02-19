@@ -14,6 +14,8 @@ public class Employee {
     String name;
     String email;
     int empNum;
+    String username = "Gnomeo";
+    String password = "smurf";
     
     // One constructor initialises the name and email instance fields with default values
     public Employee() {
@@ -61,5 +63,33 @@ public class Employee {
     public int getNextEmpNum() {
         return nextEmpNum;
     }
+    
+    // Overloaded constructor that initialises the maganer methods
+    public Employee(String name, String email, String username, String password) {
+        this.name = name;
+        this.email = email;
+        this.empNum = nextEmpNum++;
+        this.username = username;
+        this.password = password;
+    }
+    
+    // Getters and setters for the manager
+    public String getUsername() {
+        return username;
+    }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    
+    
 }

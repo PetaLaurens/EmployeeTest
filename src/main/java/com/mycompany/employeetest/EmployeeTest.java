@@ -33,6 +33,10 @@ public class EmployeeTest {
                 System.out.println(emp.name);
             }
         }
+        
+        // Running program for the manager to login
+        ManagerInput input = new ManagerInput();
+            input.managerLogin();
     }
 }
 
