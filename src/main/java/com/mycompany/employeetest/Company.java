@@ -1,3 +1,5 @@
+package com.mycompany.employeetest;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -16,8 +18,7 @@ public class Company {
     ArrayList<Employee> staff = new ArrayList<Employee>();
 
     // Default constructor for class Company that initialises all fields
-
-    public Company(String companyName, ArrayList<String> staff) {
+    public Company(String companyName, ArrayList<Employee> staff) {
         this.companyName = companyName;
         this.staff = staff;
     }
@@ -29,8 +30,8 @@ public class Company {
     }
     
     // addNewStaff() adds a new employee to the staff arrayList with the employee as a parameter
-    public void addNewStaff(Employee) {
-        staff.add(Employee);
+    public void addNewStaff(Employee newEmp) {
+        staff.add(newEmp);
     }
     
     // getStaffNumber() returns the number of employees currently in the staff arrayList
@@ -41,10 +42,10 @@ public class Company {
     
     // listEmployees() uses an iterator object to find in the arrayList all employees above a given employee
     // number value (this value is a parameter for this method) and prints the names of these employees.
-    public int listEmployees(int chosenEmpNumber) {
+    public void listEmployees(int chosenEmpNumber) {
         for (Employee emp : staff) {
             if (emp.empNum > chosenEmpNumber ) {
-                return(emp.name);
+                System.out.println(emp.name);
             }
         }
     }
