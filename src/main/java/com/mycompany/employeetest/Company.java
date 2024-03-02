@@ -14,7 +14,7 @@ public class Company {
 
     // Declares Company class with the following fields
     String companyName;
-    static ArrayList<Employee> staff;
+    static ArrayList<Employee> staff = new ArrayList<Employee>();
 
     // Default constructor for class Company that initialises all fields
     public Company(String companyName, ArrayList<Employee> staff) {

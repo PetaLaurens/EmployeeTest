@@ -42,21 +42,22 @@ public class ManagerInput {
                 System.out.println("Access granted. To display current staff enter 'D'. To add new staff enter 'A': ");
                 selectedOperation = userInput.nextLine();
                 attemptsRemaining = 0;
-                if ((selectedOperation.equals("D")) || (selectedOperation.equals("d"))) {
-                    System.out.println(Company.staff);
-                    Company.displayEmployees();
-                } else if ((selectedOperation.equals("A")) || (selectedOperation.equals("a"))) {
-                    System.out.println("Please enter the new employee Name:");
-                    String newEmployeeName = userInput.nextLine();
-                    System.out.println("Please enter the new employee Email address:");
-                    String newEmployeeEmail = userInput.nextLine();
-                    Company.addNewStaff(new Employee(newEmployeeName, newEmployeeEmail));
-                // If the manager doesn't enter the right character, the program will print a helpful message
-                } else {
-                    System.out.println("You have not entered the right character, please start again.");
+                switch (selectedOperation) {
+                    case "D", "d" : {
+                        System.out.println(Company.staff);
+                        Company.displayEmployees();
+                    }
+                    case "A", "a" : {
+                        System.out.println("Please enter the new employee Name:");
+                        String newEmployeeName = userInput.nextLine();
+                        System.out.println("Please enter the new employee Email address:");
+                        String newEmployeeEmail = userInput.nextLine();
+                        Company.addNewStaff(new Employee(newEmployeeName, newEmployeeEmail));
+                    }
+                    // If the manager doesn't enter the right character, the program will print a helpful message
+                    default : System.out.println("You have not entered the right character, please start again.");
                 }
             }
         }
-
     }
 }
