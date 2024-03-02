@@ -49,9 +49,14 @@ public class Employee {
         return email;
     }
 
-    // To set the email field to a new value passed as a parameter.  ///////////The value must not be accepted if its length is 3 or less.
+    // To set the email field to a new value passed as a parameter.
     public void setEmail(String email) {
-        this.email = email;
+        // The value must not be accepted if its length is 3 or less.
+        if (email.length() > 3) {
+            this.email = email;
+        } else {
+            System.out.println("Email address should be at least 4 characters long.");
+        }
     }
 
     // Static field: nextEmpNum, of type int and initialised to 1, which initialises empNum in the constructor
