@@ -23,14 +23,13 @@ public class Company {
     }
 
     // Overloaded constructor which accepts a name value as a parameter
-    public Company(String name) {
+    public Company(String companyName, ArrayList<Employee> staff, String name) {
         this.companyName = companyName;
         this.staff = staff;
     }
-
+    
     // addNewStaff() adds a new employee to the staff arrayList with the employee as a parameter
     public static void addNewStaff(Employee newEmp) {
-        newEmp = new Employee(newEmp.name, newEmp.email);
         staff.add(newEmp);
     }
 

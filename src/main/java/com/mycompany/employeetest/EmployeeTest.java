@@ -26,6 +26,7 @@ public class EmployeeTest {
         // Code to search and display the name of each of the employees in the projectGroup
         // array, who have an employee number above the value stored in a variable called m.
         int m = 0;
+       
 
         for (Employee emp : projectGroup) {
             if (emp.empNum > m) {
@@ -33,6 +34,7 @@ public class EmployeeTest {
             }
         }
 
+        
         // Running program for the manager to login
         ManagerInput input = new ManagerInput();
         input.managerLogin();

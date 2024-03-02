@@ -13,6 +13,7 @@ public class Manager extends Employee{
     static String username = "Gnomeo";
     static String password = "smurf";
 
+    
     public Manager(String name, String email) {
         super(name, email);
     }
