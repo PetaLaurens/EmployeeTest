@@ -27,7 +27,7 @@ public class Company {
         this.companyName = companyName;
         this.staff = staff;
     }
-    
+
     // addNewStaff() adds a new employee to the staff arrayList with the employee as a parameter
     public static void addNewStaff(Employee newEmp) {
         staff.add(newEmp);

@@ -23,10 +23,10 @@ public class EmployeeTest {
         // Prints out the value of variable nextEmpNum to the terminal window
         System.out.println(Employee.nextEmpNum);
 
+        // Variable called m that stores a random number
+        int m = 0;
         // Code to search and display the name of each of the employees in the projectGroup
         // array, who have an employee number above the value stored in a variable called m.
-        int m = 0;
-       
         for (Employee emp : projectGroup) {
             if (emp.empNum > m) {
                 System.out.println(emp.name);

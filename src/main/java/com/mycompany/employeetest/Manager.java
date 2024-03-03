@@ -8,12 +8,12 @@ package com.mycompany.employeetest;
  *
  * @author peta
  */
-public class Manager extends Employee{
+public class Manager extends Employee {
     
+    // Declaring fields for username and password to a fixed value
     static String username = "Gnomeo";
     static String password = "smurf";
 
-    
     public Manager(String name, String email) {
         super(name, email);
     }
