@@ -36,6 +36,5 @@ public class EmployeeTest {
         // Running program for the manager to login
         ManagerInput input = new ManagerInput();
         input.managerLogin();
-
     }
 }

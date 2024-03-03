@@ -34,9 +34,9 @@ public class Company {
     }
 
     // getStaffNumber() returns the number of employees currently in the staff arrayList
-    public static int getStaffNumber() {
-        int staffSize = staff.size();
-        return staffSize;
+    public static void getStaffNumber() {
+        int size = staff.size();
+        System.out.println(size);
     }
 
     // listEmployees() uses an iterator object to find in the arrayList all employees above a given employee

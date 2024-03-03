@@ -41,7 +41,7 @@ public class ManagerInput {
             } else if ((correctUsername.equals(inputUsername)) && (correctPassword.equals(inputPassword)) && (attemptsRemaining >= 0)) {
                 try {
                     do {
-                        System.out.println("Access granted. Please enter an option.");
+                        System.out.println("Please enter an option.");
                         System.out.println("1 - To display current staff.");
                         System.out.println("2 - To add new staff.");
                         System.out.println("3 - To Exit");
