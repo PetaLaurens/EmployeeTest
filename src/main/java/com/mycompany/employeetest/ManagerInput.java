@@ -14,7 +14,7 @@ public class ManagerInput {
 
     public void managerLogin() {
 
-        // Declaring variables for username, password and the operation selected by the manager
+        // Declaring all necessary variables to be able to use them inside of other scopes
         String correctUsername = Manager.username;
         String correctPassword = Manager.password;
         String inputUsername;
@@ -38,7 +38,7 @@ public class ManagerInput {
             } else if (((!correctUsername.equals(inputUsername)) || (!correctPassword.equals(inputPassword))) && (attemptsRemaining == 0)) {
                 System.out.println("Access denied. You are now locked out of the system.");
                 // If the manager logins with the right credentials, then the program will continue
-                // and will ask the manager to choose to display the current staff or to enter new staff
+                // and will ask the manager to choose to display the current staff, to enter new staff or to remove current staff
             } else if ((correctUsername.equals(inputUsername)) && (correctPassword.equals(inputPassword)) && (attemptsRemaining >= 0)) {
                 try {
                     do {
@@ -51,19 +51,22 @@ public class ManagerInput {
                         attemptsRemaining = 0;
                         // Parsing the selected operation to string, to be able to check regex condition later on
                         String selectedOperationToString = Integer.toString(selectedOperation);
+                        // Option 1 to display current staff
                         if (selectedOperation == 1) {
-                            //System.out.println(Company.staff);
                             Company.displayEmployees();
+                            // Option 2 to add new staff
                         } else if (selectedOperation == 2) {
                             System.out.println("Please enter the new employee Name:");
                             String newEmployeeName = userInput.nextLine();
                             System.out.println("Please enter the new employee Email address:");
                             String newEmployeeEmail = userInput.nextLine();
                             Company.addNewStaff(new Employee(newEmployeeName, newEmployeeEmail));
+                            // Option 3 to remove staff
                         } else if (selectedOperation == 3) {
                             System.out.println("Please enter the number of the employee you would like to remove:");
                             selectedEmployee = Integer.parseInt(userInput.nextLine());
                             Company.removeStaff(selectedEmployee);
+                            // Option 4 to exit the program
                         } else if (selectedOperation == 4) {
                             System.out.println("You have now exit the program.");
                             // If the manager doesn't enter the right character, the program will print a helpful message

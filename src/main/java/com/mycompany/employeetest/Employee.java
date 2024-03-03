@@ -63,8 +63,8 @@ public class Employee {
     public static int nextEmpNum = 1;
 
     // To return the current value of nextEmpNum.
-    public int getNextEmpNum() {
-        return nextEmpNum;
+    public static void getNextEmpNum() {
+        System.out.println(nextEmpNum);
     }
 
 }

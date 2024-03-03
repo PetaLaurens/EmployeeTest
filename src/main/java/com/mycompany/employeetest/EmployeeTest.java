@@ -9,7 +9,7 @@ package com.mycompany.employeetest;
  * @author peta
  */
 public class EmployeeTest {
-    
+
     // GitHub repository: https://github.com/PetaLaurens/EmployeeTest
     
     public static void main(String[] args) {
