@@ -20,6 +20,7 @@ public class ManagerInput {
         String inputUsername;
         String inputPassword;
         int selectedOperation;
+        int selectedEmployee;
 
         // Asking input from the manager
         Scanner userInput = new Scanner(System.in);
@@ -44,13 +45,14 @@ public class ManagerInput {
                         System.out.println("Please enter an option.");
                         System.out.println("1 - To display current staff.");
                         System.out.println("2 - To add new staff.");
-                        System.out.println("3 - To Exit");
+                        System.out.println("3 - To remove staff.");
+                        System.out.println("4 - To Exit");
                         selectedOperation = Integer.parseInt(userInput.nextLine());
                         attemptsRemaining = 0;
                         // Parsing the selected operation to string, to be able to check regex condition later on
                         String selectedOperationToString = Integer.toString(selectedOperation);
                         if (selectedOperation == 1) {
-                            System.out.println(Company.staff);
+                            //System.out.println(Company.staff);
                             Company.displayEmployees();
                         } else if (selectedOperation == 2) {
                             System.out.println("Please enter the new employee Name:");
@@ -59,12 +61,16 @@ public class ManagerInput {
                             String newEmployeeEmail = userInput.nextLine();
                             Company.addNewStaff(new Employee(newEmployeeName, newEmployeeEmail));
                         } else if (selectedOperation == 3) {
+                            System.out.println("Please enter the number of the employee you would like to remove:");
+                            selectedEmployee = Integer.parseInt(userInput.nextLine());
+                            Company.removeStaff(selectedEmployee);
+                        } else if (selectedOperation == 4) {
                             System.out.println("You have now exit the program.");
                             // If the manager doesn't enter the right character, the program will print a helpful message
                         } else if ((!selectedOperationToString.matches("^[0-9]\\d*$")) || (selectedOperation < 1) || (selectedOperation > 3)) {
                             System.out.println("You have not entered the right character, please start again.");
                         }
-                    } while (selectedOperation != 3);
+                    } while (selectedOperation != 4);
                 } catch (Exception e) {
                     System.out.println(e);
                 }

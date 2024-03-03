@@ -5,6 +5,7 @@ package com.mycompany.employeetest;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  *
@@ -55,4 +56,14 @@ public class Company {
             System.out.println(emp.name + ", " + emp.email + ", " + emp.empNum);
         }
     }
+    
+    // removeStaff() removes an employee from the staff arrayList with the employee’s empNum as a parameter
+    public static void removeStaff(int chosenEmpNum) {
+        for (Iterator<Employee> iterator = staff.listIterator(); iterator.hasNext();){
+            Employee emp = iterator.next();
+            if (emp.empNum == chosenEmpNum) {
+                iterator.remove();
+            }
+    }
+}
 }
